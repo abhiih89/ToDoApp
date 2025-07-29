@@ -1,7 +1,7 @@
 import {HashRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Home from './pages/home';
 import TodoPage from './pages/todoPage';
-import Quote from './pages/quote';
+import Quotes from './pages/quotes';
 import Navbar from './components/navbar';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/todo'  element={<TodoPage/>}/>
-        <Route path='/quote' element={<Quote/>}/>
+        <Route path='/quotes' element={<Quotes/>}/>
       </Routes>
     </Router>  
   );

@@ -1,5 +1,5 @@
 import TodoList from "../components/todolist";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 function TodoPage() {
 
     const [task, setTask] = useState('');
@@ -18,7 +18,10 @@ function TodoPage() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }, [tasks]);
 
-    
+    useEffect(() => {
+        console.log("Loaded tasks from localStorage:", tasks);
+    }, [tasks]);
+
 
     const handleAdd = () => {
         if (task.trim() !== ""){
