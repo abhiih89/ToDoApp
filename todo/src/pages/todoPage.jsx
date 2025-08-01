@@ -34,6 +34,8 @@ function TodoPage() {
             };
             setTasks([...tasks, newTask]); 
             setTask("");
+            setTaskDate("");
+            setTaskTime("");
         }
     };
 
@@ -43,8 +45,8 @@ function TodoPage() {
     };
 
     return(
-    <div style={{ padding: '20px' }}>
-        <h2>To-DO List</h2>
+    <div style={{ padding: '20px', paddingTop: '10px',  }}>
+        <h1 >To-DO List</h1>
 
         <input
         type="text" 
@@ -61,7 +63,7 @@ function TodoPage() {
         value={taskTime} 
         onChange={(e) => setTaskTime(e.target.value)}/>
 
-        <button onClick={handleAdd}>Add Task</button>
+        <button onClick={handleAdd} >Add Task</button>
 
         <TodoList tasks={tasks} onDelete={handleDelete} />
 

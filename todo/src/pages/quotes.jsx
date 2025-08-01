@@ -6,7 +6,7 @@ function Quotes (){
     useEffect(() => {
         fetch('https://api.api-ninjas.com/v1/quotes?category=life' , {
             headers: {
-                'X-Api-Key' : 'DljCtdJDbvj+U/Q7KTgWrg==oprOs7yerzGVMIGe'
+                'X-Api-Key' : import.meta.env.VITE_QUOTES_API_KEY
             }
         })
         .then((res) => res.json())
@@ -20,8 +20,8 @@ function Quotes (){
     }, []);
 
    return(
-    <div>
-        <h2>Quote of the day</h2>
+    <div style={{ padding: '20px', paddingTop: '10px',  }}>
+        <h1>Quote of the day</h1>
         {quotes.length > 0 ? (
         <div>
             <p><strong>"{quotes[0].quote}"</strong></p>
