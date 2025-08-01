@@ -7,11 +7,11 @@ function TodoList({ tasks, onDelete}) {
             <ol>
                 {tasks.map((task, index) => (
                     <li key={index}>
-                        <strong>{task.text}</strong> - due: {task.dueDate} at {task.dueTime} <br/>
-                        <em>Added on: {task.createdAt}</em>
+                        <strong style={{fontSize:'20px'}}>{task.text}</strong> - due: {task.dueDate} at {task.dueTime} <br/>
+                        <em style={{fontSize:'13px'}}>Added on: {task.createdAt}</em>
                        
                         <button onClick={() => onDelete(index)}
-                         style={{ marginLeft: '10px' }}>Delete</button>  
+                         style={{ marginLeft: '10px',  height:'30px',  fontSize:'12px' }}>🗑️</button>  
                     </li>
                 ))}
             </ol>
